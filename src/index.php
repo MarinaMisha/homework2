@@ -70,51 +70,69 @@
 //echo $result13 . PHP_EOL;
 
 
-$value = 2;
-switch ($value) {
-    case 1 :
-        echo "green" . PHP_EOL ;
-        break;
-    case 2 :
-        echo "red" . PHP_EOL ;
-        break;
-    case 3:
-        echo "blue" . PHP_EOL;
-        break;
-    case 4 :
-        echo "brown" . PHP_EOL ;
-        break;
-    case 5 :
-        echo "violet" . PHP_EOL;
-        break;
-    case 6 :
-        echo "black" . PHP_EOL ;
-        break;
-    default :
-        echo "white" . PHP_EOL;
-        break;
-}
+//$value = 2;
+//switch ($value) {
+   // case 1 :
+       // echo "green" . PHP_EOL ;
+        //break;
+    //case 2 :
+        //echo "red" . PHP_EOL ;
+       // break;
+   // case 3:
+        //echo "blue" . PHP_EOL;
+       // break;
+    //case 4 :
+        //echo "brown" . PHP_EOL ;
+       // break;
+    //case 5 :
+       // echo "violet" . PHP_EOL;
+       // break;
+   // case 6 :
+       // echo "black" . PHP_EOL ;
+      //  break;
+   // default :
+        //echo "white" . PHP_EOL;
+        //break;
+//}
 // 2 вариант
-function getColorName ($value): string  {
-    switch ($value) {
-        case 1 :
-            return "green" ;
-        case 2 :
-            return "red" ;
-        case 3 :
-            return "blue" ;
-        case 4 :
-            return "brown" ;
-        case 5 :
-            return "violet" ;
-        case 6 :
-            return "black" ;
-        default  :
-            return "white" ;
-    }
+//function getColorName ($value): string  {
+    //switch ($value) {
+       // case 1 :
+           // return "green" ;
+        //case 2 :
+           // return "red" ;
+        //case 3 :
+            //return "blue" ;
+        //case 4 :
+           // return "brown" ;
+      //  case 5 :
+          //  return "violet" ;
+        //case 6 :
+           // return "black" ;
+        //default  :
+            //return "white" ;
+   // }
 
+//}
+//echo "black" .  getColorName($value) ;
+
+//homework 6
+function nameActions  ( int $a , int $b , $callback = null): float|int
+{
+
+    $result = $a * $b ;
+
+    if ($callback && is_callable($callback)) {
+        $callback($result);
+    }
+    return $result;
 }
-echo "black" .  getColorName($value) ;
+$secondArgument = function ($arg) {
+    echo "Вивод Аргумент : $arg\n";
+};
+echo "Результат Умножения :" . nameActions(10, 6) . "\n";
+
+
 
 
 
