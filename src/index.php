@@ -117,20 +117,61 @@
 //echo "black" .  getColorName($value) ;
 
 //homework 6
-function nameActions  ( int $a , int $b , $callback = null): float|int
+//function nameActions  ( int $a , int $b , $callback = null): float|int
+//{
+
+    //$result = $a * $b ;
+
+   // if ($callback && is_callable($callback)) {
+        //$callback($result);
+    //}
+   // return $result;
+//}
+//$secondArgument = function ($arg) {
+    //echo "Вивод Аргумент : $arg\n";
+//};
+//echo "Результат Умножения :" . nameActions(10, 6) . "\n";
+
+//nameActions(12, 8, $secondArgument);
+
+//homework 5
+function calculateCircle($radius): float|int
 {
+     return M_PI * pow($radius, 2) ;
 
-    $result = $a * $b ;
 
-    if ($callback && is_callable($callback)) {
-        $callback($result);
-    }
-    return $result;
 }
-$secondArgument = function ($arg) {
-    echo "Вивод Аргумент : $arg\n";
-};
-echo "Результат Умножения :" . nameActions(10, 6) . "\n";
+$radius = 3;
+$plane = calculateCircle($radius);
+echo "Площадь круга с радиусом $radius: $plane\n ";
+//Задача № 2
+/**
+ * @param $number
+ * @param $power
+ * @return float|int
+ */
+function powerNumber($number, $power): float|int
+{
+    return pow($number, $power);
+
+}
+$number = 4;
+$power = 5;
+$result = powerNumber($number, $power);
+echo "Число $number поднесет к степени $power: $result\n";
+
+//Задача № 3
+function powerNumberReference( int&$number, int$power): float|int
+{
+    return pow($number, $power);
+
+}
+$value = 5 ;
+$power = 4 ;
+echo "Начальное значение: $value\n";
+powerNumberReference($value, $power);
+echo "Значение после изменения посіланием: $value\n";
+
 
 
 
