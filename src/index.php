@@ -135,43 +135,69 @@
 //nameActions(12, 8, $secondArgument);
 
 //homework 5
-function calculateCircle($radius): float|int
-{
-     return M_PI * pow($radius, 2) ;
+//unction calculateCircle($radius ): float|int
+//{
+     //return M_PI * pow($radius, 2) ;
 
 
-}
-$radius = 3;
-$plane = calculateCircle($radius);
-echo "Площадь круга с радиусом $radius: $plane\n ";
+//}
+//$radius = 3;
+//$plane = calculateCircle($radius);
+//echo "Площадь круга с радиусом $radius: $plane\n ";
 //Задача № 2
-/**
- * @param $number
- * @param $power
- * @return float|int
- */
-function powerNumber($number, $power): float|int
-{
-    return pow($number, $power);
-
-}
-$number = 4;
-$power = 5;
-$result = powerNumber($number, $power);
-echo "Число $number поднесет к степени $power: $result\n";
+///**
+ //* @param $number
+ //* @param $power
+ //* @return float|int
+ //*/
+//function powerNumber( int $number, int $power): float|int
+//{
+    //return pow($number, $power);
+//}
+//$number = 4;
+//$power = 5;
+//$result = powerNumber($number, $power);
+//echo "Число $number поднесет к степени $power: $result\n";
 
 //Задача № 3
-function powerNumberReference( int&$number, int$power): float|int
-{
-    return pow($number, $power);
+//function plusOne( int &$number): void
+//{
+    //++$number;
+//}
+//$value = 5 ;
+//echo "Начальное значение: $value\n";
+//plusOne($value);
+//echo $value;
+//echo "Значение после изменения посіланием: $value\n";
+
+
+//Вивод чисел от 1 до 10
+$num = 1;
+while ($num <= 10) {
+    echo $num . "";
+    $num++;
+}
+echo " " . PHP_EOL ;
+// Вичисления факториала числа 5
+$number = 5;
+$factorial = 1;
+while ($number > 1 ) {
+    $factorial *= $number ;
+    $number--;
 
 }
-$value = 5 ;
-$power = 4 ;
-echo "Начальное значение: $value\n";
-powerNumberReference($value, $power);
-echo "Значение после изменения посіланием: $value\n";
+echo  "Факториал числа 5: " . $factorial . " " . PHP_EOL ;
 
+// Вивод парних чисел от 1 до 20
+
+$num1 = 1 ;
+while ($num1 <= 20) {
+    if ($num1 % 2 == 0) {
+        echo $num1 . " " . PHP_EOL  ;
+
+    }
+    $num1 ++ ;
+}
 
 
 
