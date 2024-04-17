@@ -172,32 +172,82 @@
 
 
 //Вивод чисел от 1 до 10
-$num = 1;
-while ($num <= 10) {
-    echo $num . "";
-    $num++;
-}
-echo " " . PHP_EOL ;
+//$num = 1;
+//while ($num <= 10) {
+    //echo $num . " ";
+   // $num++;
+//}
+//echo " " . PHP_EOL ;
 // Вичисления факториала числа 5
-$number = 5;
-$factorial = 1;
-while ($number > 1 ) {
-    $factorial *= $number ;
-    $number--;
+//$number = 5;
+//$factorial = 1;
+//while ($number > 1 ) {
+    //$factorial *= $number ;
+    //$number--;
 
-}
-echo  "Факториал числа 5: " . $factorial . " " . PHP_EOL ;
+//}
+//echo  "Факториал числа 5: " . $factorial . " " . PHP_EOL ;
 
 // Вивод парних чисел от 1 до 20
 
-$num1 = 1 ;
-while ($num1 <= 20) {
-    if ($num1 % 2 == 0) {
-        echo $num1 . " " . PHP_EOL  ;
+//$num1 = 1 ;
+//while ($num1 <= 20) {
+    //if ($num1 % 2 == 0) {
+       // echo $num1 . " " . PHP_EOL  ;
 
+    //}
+   // $num1 ++ ;
+//}
+
+function generateArray( int $length) : array  {
+    $array = [];
+    for ($i = 0; $i < $length; $i++) {
+        $array [] = rand(1, 10);
     }
-    $num1 ++ ;
+    return $array;
+
+
+
 }
+$array = [];
+$array = generateArray(10);
+echo "Массив:" . implode(" , ", $array) . " " . PHP_EOL ;
+
+// Вичислить сумму єлементов масива
+$sum = 0 ;
+for ($i = 0 ; $i < count($array); $i++) {
+    $sum += $array[$i] ;
+
+}
+echo "Сумма єлементов масива:" . $sum . " " . PHP_EOL ;
+ // Вичисляем произвидение єлементов масива
+$product = 1;
+for ($i = 0; $i < count($array); $i++) {
+    $product *= $array[$i] ;
+
+}
+echo "Произведение єлементов масива: " . $product . " " . PHP_EOL;
+// Посчитать количество вхождений числа 5 в масив
+$count = 0 ;
+for ($i = 0 ; $i < count($array); $i++) {
+    if ($array[$i] == 5) {
+        $count++;
+    }
+}
+
+echo "Количество вхождений числа 5 в масив: " . $count . " " . PHP_EOL ;
+
+// Вивод чисел , которие делятся на 3
+echo "Числа , которие на цело делятся на 3: " ;
+for ($i = 0 ; $i < count($array); $i++)
+{
+    if ($array[$i] % 3 == 0) {
+        echo $array[$i] . "" ;
+    }
+}
+
+
+
 
 
 
