@@ -1,6 +1,5 @@
 <?php
-$g = 1;
-$a = 3;
+
 
 
 
@@ -10,11 +9,18 @@ function create( int $g,  int $a): void {
     fwrite($file, $g. " " .$a);
     fclose($file);
 }
-create( 1, 3);
+create( $argv[1], $argv[2]);
 echo "Аргументи били успешно записани  в log.txt\n";
 $file = fopen("log.txt" , "r");
-$log = fread($file, filesize("log.txt"));
-$logLines = explode("\n", trim($log));
-$lastLines = end($logLines) ;
-echo "Последние аргументи , которие били введени: " . $lastLines."\n";
-fclose($file);
+function readLogFile($filename) : string
+{
+    $log = file_get_contents($filename);
+    $logLines = explode("\n" , trim($log));
+    $lastLine = end($logLines) ;
+    return $lastLine ;
+
+
+
+}
+$lastArguments = readLogFile("log.txt");
+echo " Последние аргументи , которие били введенни: " . $lastArguments . "\n";
