@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/BankAccount.php';
-require_once __DIR__ . '/main.php';
+
+require_once "ParentClass.php";
+require_once  "ChildClass.php";
+require_once "main.php";
 
 
 
