@@ -2,7 +2,7 @@
 
  abstract class TaskStatus
 {
-    const COMPLETED = "виполненно";
-    const NOT_COMPLETED = "не виполненно";
+    const COMPLETED = "done";
+    const NOT_COMPLETED = "to do";
 
 }
